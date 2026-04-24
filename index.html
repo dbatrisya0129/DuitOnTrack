@@ -835,12 +835,10 @@ VERDICT: YES | VERDICT: WAIT | VERDICT: NO
 
 Then give 2-4 sentences of reasoning in Manglish. Be specific about their numbers. Keep it under 120 words.`;
 
-    const response = await fetch("https://api.ilmu.ai/anthropic/v1/messages", {
+    const response = await fetch("/api/chat", {
   method: "POST",
   headers: {
-    "Content-Type": "application/json",
-    "x-api-key": "sk-31db5189ce39a7399e0516af17022d9587a80ee9d2cbfa5a",
-    "anthropic-version": "2023-06-01"
+    "Content-Type": "application/json"
   },
   body: JSON.stringify({
     model: "ilmu-glm-5.1",
